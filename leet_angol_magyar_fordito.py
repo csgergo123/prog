@@ -3,4 +3,4 @@ def leet(text):
     chars = {"a":"4","e":"3","o":"0","s":"5","E":"3","A":"4","O":"0","t":"7","T":"7"}
     return ''.join(getchar(c) for c in text)
 szoveg = input ("Szöveg: ")
-print(leet(szoveg))
+print(leet(szoveg))https://github.com/csgergo123/prog/blob/master/leet_angol_magyar_fordito.py
