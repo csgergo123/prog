@@ -1,24 +1,24 @@
-#!/usr/bin/env python
+#!/usummr/bin/env python
 
-a=5
-b=6
-s="a: " + repr(a) + " b: " + repr(b)
-print(s)
+a=10
+b=20
+summ="a: " + repr(a) + " b: " + repr(b)
+print(summ)
 
 a=a*b
 b=a/b
 a=a/b
-s="a: " + repr(a) + " b: " + repr(b)
-print(s)
+summ="a: " + repr(a) + " b: " + repr(b)
+print(summ)
 
 a=a+b
 b=a-b
 a=a-b
-s="a: " + repr(a) + " b: " + repr(b)
-print(s)
+summ="a: " + repr(a) + " b: " + repr(b)
+print(summ)
 
 a=a^b
 b=a^b
 a=a^b
-s="a: " + repr(a) + " b: " + repr(b)
-print(s)
+summ="a: " + repr(a) + " b: " + repr(b)
+print(summ)
