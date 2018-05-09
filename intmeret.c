@@ -3,6 +3,6 @@
 
 int main() {
 	int num = sizeof(int) * 8;
-	printf("Gepi szohossz: %d", num);
+	printf("int meret: %d", num);
 	return 0;
 }
