@@ -1,55 +1,56 @@
-package labda;
+package labdaPattogas;
 
 import java.util.concurrent.TimeUnit;
 import java.math.*;
 
-public class labda {
+public class labdaPattogas {
 
 public static void main(String[] args){
 
-		int width = 50 , height = 50;
+		int w = 50 , h = 50;
 	    int x = 10, y = 20;
 	    int x2 = x, y2 = y;
 
-	    for(;;){
+	    while(1) {
 	    	try {
 				TimeUnit.MILLISECONDS.sleep(50);
 
-				y2=(y2+1)%(2*height);
-			    y=(int) (y+Math.pow(-1, (Math.floor(y2/height))));
-				x2=(x2+1)%(2*width);
-				x=(int) (x+Math.pow(-1, (Math.floor(x2/width))));
+				y2 = (y2 + 1) % (2 * h);
+			    y = (int) (y+Math.pow(-1, (Math.floor(y2 / h))));
+				x2 = (x2 + 1) % (2 * w);
+				x = (int) (x + Math.pow(-1, (Math.floor(x2 / w))));
 
                 int i;
-                for(i = 0; i < width; i++){
+
+                for(i = 0; i < w; i++) {
                     System.out.print("~");
                 }
+
                 System.out.println("");
 
-
-                for(i = 0; i < y-1; i++){
+                for(i = 0; i < y-1; i++) {
                     System.out.print("~");
-                    for(int j = 0; j < width-2; j++){
+                    for(int j = 0; j < w - 2; j++) {
                         System.out.print(" ");
                     }
                     System.out.println("~");
                 }
 
-
                 System.out.print(" ");
-                for(i = 0; i < x-1; i++){
+                for(i = 0; i < x-1; i++) {
                     System.out.print(" ");
                 }
+
                 System.out.print("X");
-                for(i = x+1; i < width-1; i++){
+                for(i = x+1; i < w-1; i++) {
                     System.out.print(" ");
                 }
+
                 System.out.println("~");
 
-
-                for(i = y; i < height-2; i++){
+                for(i = y; i < h - 2; i++) {
                     System.out.print("~");
-                    for(int j = 0; j < width-2; j++){
+                    for(int j = 0; j < w - 2; j++) {
                         System.out.print(" ");
                     }
                     System.out.println("~");
@@ -59,14 +60,13 @@ public static void main(String[] args){
                 for(i = 0; i < x-1; i++){
                     System.out.print("~");
                 }
+
                 System.out.print(" ");
-                for(i = x; i < width; i++){
+                for(i = x; i < w; i++){
                     System.out.print("#");
                 }
 
-
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 	    }

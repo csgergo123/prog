@@ -1,8 +1,8 @@
 import os
 from time import sleep
 
-def cls():
-    os.system('cls' if os.name=='nt' else 'clear')
+def sClear():
+    os.system('sClear' if os.name=='nt' else 'clear')
 
 def gotoxy(x,y):
     for i in range(y):
@@ -11,27 +11,31 @@ def gotoxy(x,y):
         print(" ", end="")
     print("o")
 
-egyx = 1
-egyy = -1
 x = 10
 y = 20
-ty = []
-tx = []
+
+xx = 1
+yy = -1
+
+yArray = []
+xArray = []
 
 for i in range(23):
-    ty.append(1)
+    yArray.append(1)
 
-ty[1] = -1
-ty[22] = -1
+yArray[1] = -1
+yArray[22] = -1
+
 
 for i in range(80):
-    tx.append(1)
-
-tx[1] = -1
-tx[79] = -1
+    xArray.append(1)
 
 
-while True:
+xArray[1] = -1
+xArray[79] = -1
+
+
+while (1):
     for i in range(37):
         print("_", end="")
 
@@ -43,11 +47,11 @@ while True:
 
     gotoxy(x,y)
 
-    x+=egyx
-    y+=egyy
+    x+=xx
+    y+=yy
 
-    egyx*=tx[x]
-    egyy*=ty[y]
+    xx*=xArray[x]
+    yy*=yArray[y]
 
     sleep(0.5)
-    cls()
+    sClear()
