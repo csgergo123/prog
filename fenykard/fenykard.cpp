@@ -349,6 +349,46 @@ void print_act_probs ( P_act_per_day & act_per_day )
 
 using Submarks = std::map< std::string, std::map< std::string, double > >;
 
+/*
+void print_marks ( Submarks & submarks )
+{
+        for ( auto & user : submarks ) {
+
+
+                int sum = std::accumulate ( user.second.begin(), user.second.end(), 0,
+                [] ( int total, std::pair<std::string, int> pair ) {
+                        return total + pair.second;
+                } );
+
+
+                std::cout << user.first << " #" << user.second.size() << " mark: " << sum / user.second.size() << std::endl;
+
+        }
+}
+*/
+
+void print_marks ( Submarks & submarks )
+{
+    for ( auto & user : submarks ) {
+
+        if (user.second.size() == 3) {
+            std::cout << user.first << " " << user.second.at("City/Debrecen/Oktatás/Informatika/Programozás/DEIK/Prog1/Labor/Védés/I") <<std::endl;
+            std::cout << user.first << " " << user.second.at("City/Debrecen/Oktatás/Informatika/Programozás/DEIK/Prog1/Labor/Védés/II") <<std::endl;
+            std::cout << user.first << " " << user.second.at("City/Debrecen/Oktatás/Informatika/Programozás/DEIK/Prog1/Labor/Védés/III") <<std::endl;
+        } else if (user.second.size() == 2) {
+            std::cout << user.first << " " << user.second.at("City/Debrecen/Oktatás/Informatika/Programozás/DEIK/Prog1/Labor/Védés/I") <<std::endl;
+            std::cout << user.first << " " << user.second.at("City/Debrecen/Oktatás/Informatika/Programozás/DEIK/Prog1/Labor/Védés/II") <<std::endl;
+            std::cout << user.first << " " << "1" << std::endl;
+        } else if (user.second.size() == 1) {
+            std::cout << user.first << " " << user.second.at("City/Debrecen/Oktatás/Informatika/Programozás/DEIK/Prog1/Labor/Védés/I") <<std::endl;
+            std::cout << user.first << " " << "1" << std::endl;
+            std::cout << user.first << " " << "1" << std::endl;
+        }
+
+    }
+}
+
+/*
 void print_marks ( Submarks & submarks )
 {
         for ( auto & user : submarks ) {
@@ -360,14 +400,14 @@ void print_marks ( Submarks & submarks )
                 } );
 
                
-                if(user.second.size()==1){
+                if(user.second.size()==1) {
                         std::cout <<user.first<<" "<< user.second.at("City/Debrecen/Oktatás/Informatika/Programozás/DEIK/Prog1/Labor/Védés/I")<<" 1 1" <<std::endl;
                 }
-                if(user.second.size()==2){
+                if(user.second.size()==2) {
                         std::cout <<user.first<<" "<< user.second.at("City/Debrecen/Oktatás/Informatika/Programozás/DEIK/Prog1/Labor/Védés/I")
                         <<user.first<<" "<< user.second.at("City/Debrecen/Oktatás/Informatika/Programozás/DEIK/Prog1/Labor/Védés/II")<<" 1"<<std::endl;
                 }
-                if(user.second.size()==3){
+                if(user.second.size()==3) {
                         std::cout <<user.first<<" "<< user.second.at("City/Debrecen/Oktatás/Informatika/Programozás/DEIK/Prog1/Labor/Védés/I")<<
                         user.first<<" "<< user.second.at("City/Debrecen/Oktatás/Informatika/Programozás/DEIK/Prog1/Labor/Védés/II")<<
                         user.first<<" "<< user.second.at("City/Debrecen/Oktatás/Informatika/Programozás/DEIK/Prog1/Labor/Védés/III")<<std::endl;
@@ -376,6 +416,7 @@ void print_marks ( Submarks & submarks )
         }
 
 }
+*/
 
 void print_submarks ( Submarks & submarks )
 {
