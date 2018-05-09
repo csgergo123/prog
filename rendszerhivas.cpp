@@ -1,8 +1,8 @@
 #include <linux/init.h>
+#include <linux/list.h>
 #include <linux/module.h>
 #include <linux/kernel.h>
 #include <linux/sched.h>
-#include <linux/list.h>
 #include <linux/fdtable.h>
 
 MODULE_DESCRIPTION ("Ez a PARP konyv bevezetesenek pelda modulja");
@@ -23,7 +23,7 @@ static int fleiro_init (void) {
 }
 
 static void fleiro_exit (void) {
- printk (KERN_NOTICE "fleiro modul kilep\n");
+ printk (KERN_NOTICE "Goodby\n");
 }
 
 module_init (fleiro_init);
